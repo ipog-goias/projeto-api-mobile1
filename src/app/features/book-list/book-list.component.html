@@ -1,0 +1,14 @@
+<p>book-list works!</p>
+<div *ngIf="books">
+    <h2>Lista de Livros</h2>
+    <ul>
+        <li *ngFor="let book of books">
+            <p>{{ book.id }}</p>
+                {{ book.title  | titlecase}}
+        </li>
+    </ul>
+</div>
+
+<div *ngIf="!books">
+    <p>Carregando dados de livros de Stephen King</p>
+</div>
